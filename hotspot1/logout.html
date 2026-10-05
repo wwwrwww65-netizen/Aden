@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="theme-color" content="#041f22" />
+    <title>الخالد نت - تم تسجيل الخروج</title>
+    <link rel="stylesheet" href="css/modern-hotspot.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="js/modern-hotspot.js"></script>
+    <script src="js/mine.js"></script>
+    <script>
+        function openLogin() {
+            if (window.name !== 'hotspot_logout') return true;
+            open('$(link-login)', '_blank', '');
+            window.close();
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Ambient Background Glows -->
+    <div class="bg-ambient bg-ambient-top"></div>
+    <div class="bg-ambient bg-ambient-bottom"></div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="img/logo.png" alt="الخالد نت" class="header-logo" onerror="this.src='ico.png'">
+            <div class="header-title-box">
+                <h1>شبكة الخالد نت</h1>
+                <p>تم إنهاء الجلسة بنجاح</p>
+            </div>
+        </div>
+        <div class="header-status-badge" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); color: #fca5a5;">
+            <span class="status-dot" style="background: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+            <span>غير متصل</span>
+        </div>
+    </header>
+
+    <!-- News Ticker Marquee -->
+    <div class="news-ticker-container">
+        <div class="ticker-badge">
+            <span>📢 تنبيهات</span>
+        </div>
+        <div class="ticker-marquee">
+            <span class="ticker-text">شكراً لاستخدامك شبكة الخالد نت | يمكنك إعادة تسجيل الدخول في أي وقت بالضغط على الزر أدناه</span>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="glass-card">
+            <div class="card-title-box">
+                <div style="font-size: 2.2rem; margin-bottom: 8px;">👋</div>
+                <h2>تم تسجيل الخروج بنجاح</h2>
+                <p>ملخص استهلاك الجلسة المنتهية:</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">📥 التحميل (داونلود)</span>
+                    <span class="stat-value">
+                        <script type="text/javascript">
+                            document.write(toArabicBytes("$(bytes-out)"));
+                        </script>
+                    </span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">📤 الرفع (أبلود)</span>
+                    <span class="stat-value highlight">
+                        <script type="text/javascript">
+                            document.write(toArabicBytes("$(bytes-in)"));
+                        </script>
+                    </span>
+                </div>
+
+                $(if remain-bytes-total)
+                <div class="stat-card stat-card-full" style="background: rgba(0, 242, 195, 0.12); border-color: var(--accent-cyan);">
+                    <span class="stat-label" style="color: var(--accent-cyan);">📊 الرصيد المتبقي</span>
+                    <span class="stat-value" style="font-size: 1.2rem;">
+                        <script type="text/javascript">
+                            document.write(toArabicBytes("$(remain-bytes-total)"));
+                        </script>
+                    </span>
+                </div>
+                $(endif)
+
+                <div class="stat-card">
+                    <span class="stat-label">⏱️ مدة الاتصال</span>
+                    <span class="stat-value">
+                        <script type="text/javascript">
+                            document.write(toArabicTime("$(uptime)"));
+                        </script>
+                    </span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">⏳ الوقت المتبقي</span>
+                    <span class="stat-value highlight">
+                        $(if session-time-left)
+                        <script type="text/javascript">
+                            document.write(toArabicTime("$(session-time-left)"));
+                        </script>
+                        $(else)
+                        مفتوح
+                        $(endif)
+                    </span>
+                </div>
+            </div>
+
+            <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                <button type="submit" class="btn-submit">
+                    <span>العودة وتسجيل الدخول مجدداً</span>
+                    <span>🔄</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer Copyright -->
+        <footer class="app-footer">
+            <p>جميع الحقوق محفوظة © 2026 <span>شبكة الخالد نت</span></p>
+            <p>خدمة العملاء: 776418435 - 734059346</p>
+        </footer>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="login.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="bundles.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span>الباقات</span>
+        </a>
+        <a href="sell-points.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>نقاط البيع</span>
+        </a>
+        <a href="lamsports.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+            <span>البث المباشر</span>
+        </a>
+        <a href="contact.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>اتصل بنا</span>
+        </a>
+    </nav>
+</body>
+
+</html>
